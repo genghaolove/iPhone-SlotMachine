@@ -172,8 +172,28 @@ class ViewController: UIViewController {
         self.resetButton.sizeToFit()
         self.resetButton.center = CGPointMake(containerView.frame.width * oneEighth, containerView.frame.height * oneHalf)
         // Setting reset button's action
-        self.resetButton.addTarget(self, action: "ResetButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.resetButton.addTarget(self, action: "resetButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.resetButton)
+        
+        // Setting a button for betting one credit
+        self.betOneButton = UIButton()
+        self.betOneButton.setTitle("Bet One", forState: UIControlState.Normal)
+        self.betOneButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.betOneButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.betOneButton.backgroundColor = UIColor.greenColor()
+        self.betOneButton.sizeToFit()
+        self.betOneButton.center = CGPointMake(containerView.frame.width * oneEighth * 3, containerView.frame.height * oneHalf)
+        //Setting bet one button's action
+        self.betOneButton.addTarget(self, action: "betOneButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(self.betOneButton)
+    }
+    
+    // IBActions
+    func resetButtonPressed(sender: UIButton) {
+        // Debug
+        // println("reset button pressed")
+        
+        
     }
 }
 
