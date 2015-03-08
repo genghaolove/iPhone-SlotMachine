@@ -57,7 +57,6 @@ class ViewController: UIViewController {
     }
     
     func setupContainerViews() {
-        
         // Four different views will represent four parts of the screen
         
         self.firstContainer = UIView(frame: CGRectMake(self.view.bounds.origin.x + marginForView, self.view.bounds.origin.y, self.view.bounds.width - (marginForView * 2), self.view.bounds.height * oneSixth))
@@ -77,6 +76,7 @@ class ViewController: UIViewController {
         self.view.addSubview(self.fourthContainer)
     }
     
+    // First container holds the title
     func setupFirstContainer(containerView: UIView) {
         self.titleLabel = UILabel()
         self.titleLabel.text = "Slot Machine"
@@ -88,6 +88,7 @@ class ViewController: UIViewController {
         containerView.addSubview(self.titleLabel)
     }
     
+    // Second container holds the slots
     func setupSecondContainer(containerView: UIView) {
         // Sets nine fields, 3 per slot
         for containerNumber in 0..<numberOfContainersPerSlot {
@@ -106,7 +107,9 @@ class ViewController: UIViewController {
         }
     }
     
+    // Third container holds Credits, current bet and total amount paid to player
     func setupThirdContainer(containerView: UIView) {
+        
         self.creditsLabel = UILabel()
         self.creditsLabel.text = "000000"
         self.creditsLabel.textColor = UIColor.redColor()
@@ -162,7 +165,9 @@ class ViewController: UIViewController {
         containerView.addSubview(self.winnerPaidTitleLabel)
     }
     
+    // Fourth container holds buttons
     func setupFourthContainer(containerView: UIView) {
+        
         // Setting reset button's properties
         self.resetButton = UIButton()
         self.resetButton.setTitle("Reset", forState: UIControlState.Normal)
@@ -186,14 +191,54 @@ class ViewController: UIViewController {
         //Setting bet one button's action
         self.betOneButton.addTarget(self, action: "betOneButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.betOneButton)
+        
+        // Setting a button for betting max (5)
+        self.betMaxButton = UIButton()
+        self.betMaxButton.setTitle("Bet Max", forState: UIControlState.Normal)
+        self.betMaxButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.betMaxButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.betMaxButton.backgroundColor = UIColor.greenColor()
+        self.betMaxButton.sizeToFit()
+        self.betMaxButton.center = CGPointMake(containerView.frame.width * oneEighth * 5, containerView.frame.height * oneHalf)
+        // Setting bet max button's action
+        self.betMaxButton.addTarget(self, action: "betMaxButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(self.betMaxButton)
+        
+        self.spinButton = UIButton()
+        self.spinButton.setTitle("Spin", forState: UIControlState.Normal)
+        self.spinButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.spinButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.spinButton.backgroundColor = UIColor.orangeColor()
+        self.spinButton.sizeToFit()
+        self.spinButton.center = CGPointMake(containerView.frame.width * oneEighth * 7, containerView.frame.height * oneHalf)
+        // Setting spin button's action
+        self.spinButton.addTarget(self, action: "spinButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(self.spinButton)
     }
     
     // IBActions
     func resetButtonPressed(sender: UIButton) {
+        
         // Debug
-        // println("reset button pressed")
+        println("reset button pressed")
+    }
+    
+    func betOneButtonPressed(sender: UIButton) {
         
+        // Debug
+        println("bet one button pressed")
+    }
+    
+    func betMaxButtonPressed(sender: UIButton) {
         
+        // Debug
+        println("bet max button pressed")
+    }
+    
+    func spinButtonPressed(sender: UIButton) {
+        
+        // Debug
+        println("spin button pressed")
     }
 }
 
