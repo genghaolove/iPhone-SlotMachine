@@ -142,8 +142,16 @@ class ViewController: UIViewController {
         self.betTitleLabel.textColor = UIColor.blackColor()
         self.betTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.betTitleLabel.sizeToFit()
-        self.betTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth * 3, containerView.frame.height * oneThird * 3)
+        self.betTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth * 3, containerView.frame.height * oneThird * 2)
         containerView.addSubview(self.betTitleLabel)
+        
+        self.winnerPaidTitleLabel = UILabel()
+        self.winnerPaidTitleLabel.text = "Winner Paid"
+        self.winnerPaidTitleLabel.textColor = UIColor.blackColor()
+        self.winnerPaidTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
+        self.winnerPaidTitleLabel.sizeToFit()
+        self.winnerPaidTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth * 5, containerView.frame.height * oneThird * 2)
+        containerView.addSubview(self.winnerPaidTitleLabel)
     }
 }
 
