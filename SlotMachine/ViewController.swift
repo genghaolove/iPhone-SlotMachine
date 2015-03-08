@@ -128,6 +128,15 @@ class ViewController: UIViewController {
         self.winnerPaidLabel.textAlignment = NSTextAlignment.Center
         self.winnerPaidLabel.backgroundColor = UIColor.darkGrayColor()
         containerView.addSubview(self.winnerPaidLabel)
+        
+        self.creditsTitleLabel = UILabel()
+        self.creditsTitleLabel.text = "Credits"
+        self.creditsTitleLabel.textColor = UIColor.blackColor()
+        self.creditsTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
+        self.creditsTitleLabel.sizeToFit()
+        self.creditsTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth, containerView.frame.height * oneThird * 2)
+        containerView.addSubview(self.creditsTitleLabel)
+        
     }
 }
 
