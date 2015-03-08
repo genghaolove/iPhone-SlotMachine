@@ -59,19 +59,47 @@ class ViewController: UIViewController {
     func setupContainerViews() {
         // Four different views will represent four parts of the screen
         
-        self.firstContainer = UIView(frame: CGRectMake(self.view.bounds.origin.x + marginForView, self.view.bounds.origin.y, self.view.bounds.width - (marginForView * 2), self.view.bounds.height * oneSixth))
+        self.firstContainer = UIView(
+            frame: CGRectMake(
+                self.view.bounds.origin.x + marginForView,
+                self.view.bounds.origin.y,
+                self.view.bounds.width - (marginForView * 2),
+                self.view.bounds.height * oneSixth
+            )
+        )
         self.firstContainer.backgroundColor = UIColor.redColor()
         self.view.addSubview(self.firstContainer)
         
-        self.secondContainer = UIView(frame: CGRectMake(self.view.bounds.origin.x + marginForView, firstContainer.frame.height, self.view.bounds.width - (marginForView * 2), self.view.bounds.height * (oneSixth * 3)))
+        self.secondContainer = UIView(
+            frame: CGRectMake(
+                self.view.bounds.origin.x + marginForView,
+                firstContainer.frame.height,
+                self.view.bounds.width - (marginForView * 2),
+                self.view.bounds.height * (oneSixth * 3)
+            )
+        )
         self.secondContainer.backgroundColor = UIColor.blackColor()
         self.view.addSubview(self.secondContainer)
         
-        self.thirdContainer = UIView(frame: CGRectMake(self.view.bounds.origin.x + marginForView, firstContainer.frame.height + secondContainer.frame.height, self.view.bounds.width - (marginForView * 2), self.view.bounds.height * oneSixth))
+        self.thirdContainer = UIView(
+            frame: CGRectMake(
+                self.view.bounds.origin.x + marginForView,
+                firstContainer.frame.height + secondContainer.frame.height,
+                self.view.bounds.width - (marginForView * 2),
+                self.view.bounds.height * oneSixth
+            )
+        )
         self.thirdContainer.backgroundColor = UIColor.lightGrayColor()
         self.view.addSubview(self.thirdContainer)
         
-        self.fourthContainer = UIView(frame: CGRectMake(self.view.bounds.origin.x + marginForView, firstContainer.frame.height + secondContainer.frame.height + thirdContainer.frame.height, self.view.bounds.width - (marginForView * 2), self.view.bounds.height * oneSixth))
+        self.fourthContainer = UIView(
+            frame: CGRectMake(
+                self.view.bounds.origin.x + marginForView,
+                firstContainer.frame.height + secondContainer.frame.height + thirdContainer.frame.height,
+                self.view.bounds.width - (marginForView * 2),
+                self.view.bounds.height * oneSixth
+            )
+        )
         self.fourthContainer.backgroundColor = UIColor.blackColor()
         self.view.addSubview(self.fourthContainer)
     }
@@ -96,8 +124,10 @@ class ViewController: UIViewController {
                 var slotImageView = UIImageView()
                 slotImageView.backgroundColor = UIColor.yellowColor()
                 slotImageView.frame = CGRectMake(
-                    containerView.bounds.origin.x + (containerView.bounds.size.width * CGFloat(containerNumber) * oneThird),
-                    containerView.bounds.origin.y + (containerView.bounds.size.height * CGFloat(slotNumber) * oneThird),
+                    containerView.bounds.origin.x +
+                        (containerView.bounds.size.width * CGFloat(containerNumber) * oneThird),
+                    containerView.bounds.origin.y +
+                        (containerView.bounds.size.height * CGFloat(slotNumber) * oneThird),
                     containerView.bounds.width * oneThird - marginForSlot,
                     containerView.bounds.height * oneThird - marginForSlot
                 )
@@ -115,7 +145,10 @@ class ViewController: UIViewController {
         self.creditsLabel.textColor = UIColor.redColor()
         self.creditsLabel.font = UIFont(name: "Menlo-Bold", size: 16)
         self.creditsLabel.sizeToFit()
-        self.creditsLabel.center = CGPointMake(containerView.frame.width * oneSixth, containerView.frame.height * oneThird)
+        self.creditsLabel.center = CGPointMake(
+            containerView.frame.width * oneSixth,
+            containerView.frame.height * oneThird
+        )
         self.creditsLabel.textAlignment = NSTextAlignment.Center
         self.creditsLabel.backgroundColor = UIColor.darkGrayColor()
         containerView.addSubview(self.creditsLabel)
@@ -125,7 +158,10 @@ class ViewController: UIViewController {
         self.betLabel.textColor = UIColor.redColor()
         self.betLabel.font = UIFont(name: "Menlo-Bold", size: 16)
         self.betLabel.sizeToFit()
-        self.betLabel.center = CGPointMake(containerView.frame.width * oneSixth * 3, containerView.frame.height * oneThird)
+        self.betLabel.center = CGPointMake(
+            containerView.frame.width * oneSixth * 3,
+            containerView.frame.height * oneThird
+        )
         self.betLabel.textAlignment = NSTextAlignment.Center
         self.betLabel.backgroundColor = UIColor.darkGrayColor()
         containerView.addSubview(self.betLabel)
@@ -135,7 +171,10 @@ class ViewController: UIViewController {
         self.winnerPaidLabel.textColor = UIColor.redColor()
         self.winnerPaidLabel.font = UIFont(name: "Menlo-Bold", size: 16)
         self.winnerPaidLabel.sizeToFit()
-        self.winnerPaidLabel.center = CGPointMake(containerView.frame.width * oneSixth * 5, containerView.frame.height * oneThird)
+        self.winnerPaidLabel.center = CGPointMake(
+            containerView.frame.width * oneSixth * 5,
+            containerView.frame.height * oneThird
+        )
         self.winnerPaidLabel.textAlignment = NSTextAlignment.Center
         self.winnerPaidLabel.backgroundColor = UIColor.darkGrayColor()
         containerView.addSubview(self.winnerPaidLabel)
@@ -145,7 +184,10 @@ class ViewController: UIViewController {
         self.creditsTitleLabel.textColor = UIColor.blackColor()
         self.creditsTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.creditsTitleLabel.sizeToFit()
-        self.creditsTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth, containerView.frame.height * oneThird * 2)
+        self.creditsTitleLabel.center = CGPointMake(
+            containerView.frame.width * oneSixth,
+            containerView.frame.height * oneThird * 2
+        )
         containerView.addSubview(self.creditsTitleLabel)
         
         self.betTitleLabel = UILabel()
@@ -153,7 +195,10 @@ class ViewController: UIViewController {
         self.betTitleLabel.textColor = UIColor.blackColor()
         self.betTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.betTitleLabel.sizeToFit()
-        self.betTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth * 3, containerView.frame.height * oneThird * 2)
+        self.betTitleLabel.center = CGPointMake(
+            containerView.frame.width * oneSixth * 3,
+            containerView.frame.height * oneThird * 2
+        )
         containerView.addSubview(self.betTitleLabel)
         
         self.winnerPaidTitleLabel = UILabel()
@@ -161,7 +206,10 @@ class ViewController: UIViewController {
         self.winnerPaidTitleLabel.textColor = UIColor.blackColor()
         self.winnerPaidTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.winnerPaidTitleLabel.sizeToFit()
-        self.winnerPaidTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth * 5, containerView.frame.height * oneThird * 2)
+        self.winnerPaidTitleLabel.center = CGPointMake(
+            containerView.frame.width * oneSixth * 5,
+            containerView.frame.height * oneThird * 2
+        )
         containerView.addSubview(self.winnerPaidTitleLabel)
     }
     
@@ -175,9 +223,16 @@ class ViewController: UIViewController {
         self.resetButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
         self.resetButton.backgroundColor = UIColor.lightGrayColor()
         self.resetButton.sizeToFit()
-        self.resetButton.center = CGPointMake(containerView.frame.width * oneEighth, containerView.frame.height * oneHalf)
+        self.resetButton.center = CGPointMake(
+            containerView.frame.width * oneEighth,
+            containerView.frame.height * oneHalf
+        )
         // Setting reset button's action
-        self.resetButton.addTarget(self, action: "resetButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.resetButton.addTarget(
+            self,
+            action: "resetButtonPressed:",
+            forControlEvents: UIControlEvents.TouchUpInside
+        )
         containerView.addSubview(self.resetButton)
         
         // Setting a button for betting one credit
@@ -187,9 +242,16 @@ class ViewController: UIViewController {
         self.betOneButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
         self.betOneButton.backgroundColor = UIColor.greenColor()
         self.betOneButton.sizeToFit()
-        self.betOneButton.center = CGPointMake(containerView.frame.width * oneEighth * 3, containerView.frame.height * oneHalf)
+        self.betOneButton.center = CGPointMake(
+            containerView.frame.width * oneEighth * 3,
+            containerView.frame.height * oneHalf
+        )
         //Setting bet one button's action
-        self.betOneButton.addTarget(self, action: "betOneButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.betOneButton.addTarget(
+            self,
+            action: "betOneButtonPressed:",
+            forControlEvents: UIControlEvents.TouchUpInside
+        )
         containerView.addSubview(self.betOneButton)
         
         // Setting a button for betting max (5)
@@ -199,9 +261,16 @@ class ViewController: UIViewController {
         self.betMaxButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
         self.betMaxButton.backgroundColor = UIColor.greenColor()
         self.betMaxButton.sizeToFit()
-        self.betMaxButton.center = CGPointMake(containerView.frame.width * oneEighth * 5, containerView.frame.height * oneHalf)
+        self.betMaxButton.center = CGPointMake(
+            containerView.frame.width * oneEighth * 5,
+            containerView.frame.height * oneHalf
+        )
         // Setting bet max button's action
-        self.betMaxButton.addTarget(self, action: "betMaxButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.betMaxButton.addTarget(
+            self,
+            action: "betMaxButtonPressed:",
+            forControlEvents: UIControlEvents.TouchUpInside
+        )
         containerView.addSubview(self.betMaxButton)
         
         self.spinButton = UIButton()
@@ -210,9 +279,16 @@ class ViewController: UIViewController {
         self.spinButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
         self.spinButton.backgroundColor = UIColor.orangeColor()
         self.spinButton.sizeToFit()
-        self.spinButton.center = CGPointMake(containerView.frame.width * oneEighth * 7, containerView.frame.height * oneHalf)
+        self.spinButton.center = CGPointMake(
+            containerView.frame.width * oneEighth * 7,
+            containerView.frame.height * oneHalf
+        )
         // Setting spin button's action
-        self.spinButton.addTarget(self, action: "spinButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.spinButton.addTarget(
+            self,
+            action: "spinButtonPressed:",
+            forControlEvents: UIControlEvents.TouchUpInside
+        )
         containerView.addSubview(self.spinButton)
     }
     
