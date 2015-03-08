@@ -137,6 +137,13 @@ class ViewController: UIViewController {
         self.creditsTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth, containerView.frame.height * oneThird * 2)
         containerView.addSubview(self.creditsTitleLabel)
         
+        self.betTitleLabel = UILabel()
+        self.betTitleLabel.text = "Bet"
+        self.betTitleLabel.textColor = UIColor.blackColor()
+        self.betTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
+        self.betTitleLabel.sizeToFit()
+        self.betTitleLabel.center = CGPointMake(containerView.frame.width * oneSixth * 3, containerView.frame.height * oneThird * 3)
+        containerView.addSubview(self.betTitleLabel)
     }
 }
 
