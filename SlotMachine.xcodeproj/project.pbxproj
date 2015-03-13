@@ -13,6 +13,7 @@
 		EE2FD8FC1AAC204E0018D0F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2FD8FB1AAC204E0018D0F9 /* Images.xcassets */; };
 		EE2FD8FF1AAC204E0018D0F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2FD8FD1AAC204E0018D0F9 /* LaunchScreen.xib */; };
 		EE2FD90B1AAC204E0018D0F9 /* SlotMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2FD90A1AAC204E0018D0F9 /* SlotMachineTests.swift */; };
+		EEA9C37B1AAD25EF00337465 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9C37A1AAD25EF00337465 /* Slot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EE2FD9041AAC204E0018D0F9 /* SlotMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlotMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2FD9091AAC204E0018D0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE2FD90A1AAC204E0018D0F9 /* SlotMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineTests.swift; sourceTree = "<group>"; };
+		EEA9C37A1AAD25EF00337465 /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				EE2FD8FB1AAC204E0018D0F9 /* Images.xcassets */,
 				EE2FD8FD1AAC204E0018D0F9 /* LaunchScreen.xib */,
 				EE2FD8F21AAC204E0018D0F9 /* Supporting Files */,
+				EEA9C37A1AAD25EF00337465 /* Slot.swift */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE2FD8F71AAC204E0018D0F9 /* ViewController.swift in Sources */,
+				EEA9C37B1AAD25EF00337465 /* Slot.swift in Sources */,
 				EE2FD8F51AAC204E0018D0F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				EE2FD9101AAC204E0018D0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE2FD9111AAC204E0018D0F9 /* Build configuration list for PBXNativeTarget "SlotMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				EE2FD9131AAC204E0018D0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
