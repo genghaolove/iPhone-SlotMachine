@@ -49,33 +49,33 @@ class Factory {
         var slot: Slot
         switch randomNumber {
         case 0:
-            slot = Slot(value: 1, image: UIImage(named: "Ace")!, isRed: true)
+            slot = Slot(value: 1, image: UIImage(named: "ace_of_hearts")!, isRed: true)
         case 1:
-            slot = Slot(value: 2, image: UIImage(named: "Two")!, isRed: true)
+            slot = Slot(value: 2, image: UIImage(named: "two_of_hearts")!, isRed: true)
         case 2:
-            slot = Slot(value: 3, image: UIImage(named: "Three")!, isRed: true)
+            slot = Slot(value: 3, image: UIImage(named: "three_of_clubs")!, isRed: false)
         case 3:
-            slot = Slot(value: 4, image: UIImage(named: "Four")!, isRed: true)
+            slot = Slot(value: 4, image: UIImage(named: "four_of_hearts")!, isRed: true)
         case 4:
-            slot = Slot(value: 5, image: UIImage(named: "Five")!, isRed: true)
+            slot = Slot(value: 5, image: UIImage(named: "five_of_clubs")!, isRed: false)
         case 5:
-            slot = Slot(value: 6, image: UIImage(named: "Six")!, isRed: true)
+            slot = Slot(value: 6, image: UIImage(named: "six_of_clubs")!, isRed: false)
         case 6:
-            slot = Slot(value: 7, image: UIImage(named: "Seven")!, isRed: true)
+            slot = Slot(value: 7, image: UIImage(named: "seven_of_hearts")!, isRed: true)
         case 7:
-            slot = Slot(value: 8, image: UIImage(named: "Eight")!, isRed: true)
+            slot = Slot(value: 8, image: UIImage(named: "eight_of_clubs")!, isRed: false)
         case 8:
-            slot = Slot(value: 9, image: UIImage(named: "Nine")!, isRed: true)
+            slot = Slot(value: 9, image: UIImage(named: "nine_of_hearts")!, isRed: true)
         case 9:
-            slot = Slot(value: 10, image: UIImage(named: "Ten")!, isRed: true)
+            slot = Slot(value: 10, image: UIImage(named: "ten_of_hearts")!, isRed: true)
         case 10:
-            slot = Slot(value: 11, image: UIImage(named: "Jack")!, isRed: true)
+            slot = Slot(value: 11, image: UIImage(named: "jack_of_hearts2")!, isRed: true)
         case 11:
-            slot = Slot(value: 12, image: UIImage(named: "Queen")!, isRed: true)
+            slot = Slot(value: 12, image: UIImage(named: "queen_of_clubs2")!, isRed: false)
         case 12:
-            slot = Slot(value: 13, image: UIImage(named: "King")!, isRed: true)
+            slot = Slot(value: 13, image: UIImage(named: "king_of_hearts2")!, isRed: true)
         default:
-            slot = Slot(value: 1, image: UIImage(named: "Ace")!, isRed: true)
+            slot = Slot(value: 1, image: UIImage(named: "ace_of_hearts")!, isRed: true)
         }
         
         return slot
