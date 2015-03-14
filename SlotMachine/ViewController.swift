@@ -40,6 +40,9 @@ class ViewController: UIViewController {
     var betMaxButton: UIButton!
     var spinButton: UIButton!
     
+    // Slots array
+    var slots: [[Slot]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -121,7 +124,19 @@ class ViewController: UIViewController {
         // Sets nine fields, 3 per slot
         for containerNumber in 0..<numberOfContainersPerSlot {
             for slotNumber in 0..<numberOfSlots {
+                
+                var slot: Slot
                 var slotImageView = UIImageView()
+                
+                if slots.count != 0 {
+                    let slotContainer = slots[containerNumber]
+                    slot = slotContainer[slotNumber]
+                    slotImageView.image = slot.image
+                }
+                else {
+                    slotImageView.image = UIImage(named: "ace_of_hearts")
+                }
+                
                 slotImageView.backgroundColor = UIColor.yellowColor()
                 slotImageView.frame = CGRectMake(
                     containerView.bounds.origin.x +
@@ -314,7 +329,10 @@ class ViewController: UIViewController {
     func spinButtonPressed(sender: UIButton) {
         
         // Debug
-        println("spin button pressed")
+        //println("spin button pressed")
+        
+        slots = Factory.createSlots()
+        setupSecondContainer(self.secondContainer)
     }
 }
 

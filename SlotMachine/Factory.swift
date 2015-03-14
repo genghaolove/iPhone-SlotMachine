@@ -51,23 +51,23 @@ class Factory {
         case 0:
             slot = Slot(value: 1, image: UIImage(named: "ace_of_hearts")!, isRed: true)
         case 1:
-            slot = Slot(value: 2, image: UIImage(named: "two_of_hearts")!, isRed: true)
+            slot = Slot(value: 2, image: UIImage(named: "2_of_hearts")!, isRed: true)
         case 2:
-            slot = Slot(value: 3, image: UIImage(named: "three_of_clubs")!, isRed: false)
+            slot = Slot(value: 3, image: UIImage(named: "3_of_clubs")!, isRed: false)
         case 3:
-            slot = Slot(value: 4, image: UIImage(named: "four_of_hearts")!, isRed: true)
+            slot = Slot(value: 4, image: UIImage(named: "4_of_hearts")!, isRed: true)
         case 4:
-            slot = Slot(value: 5, image: UIImage(named: "five_of_clubs")!, isRed: false)
+            slot = Slot(value: 5, image: UIImage(named: "5_of_clubs")!, isRed: false)
         case 5:
-            slot = Slot(value: 6, image: UIImage(named: "six_of_clubs")!, isRed: false)
+            slot = Slot(value: 6, image: UIImage(named: "6_of_clubs")!, isRed: false)
         case 6:
-            slot = Slot(value: 7, image: UIImage(named: "seven_of_hearts")!, isRed: true)
+            slot = Slot(value: 7, image: UIImage(named: "7_of_hearts")!, isRed: true)
         case 7:
-            slot = Slot(value: 8, image: UIImage(named: "eight_of_clubs")!, isRed: false)
+            slot = Slot(value: 8, image: UIImage(named: "8_of_clubs")!, isRed: false)
         case 8:
-            slot = Slot(value: 9, image: UIImage(named: "nine_of_hearts")!, isRed: true)
+            slot = Slot(value: 9, image: UIImage(named: "9_of_hearts")!, isRed: true)
         case 9:
-            slot = Slot(value: 10, image: UIImage(named: "ten_of_hearts")!, isRed: true)
+            slot = Slot(value: 10, image: UIImage(named: "10_of_hearts")!, isRed: true)
         case 10:
             slot = Slot(value: 11, image: UIImage(named: "jack_of_hearts2")!, isRed: true)
         case 11:
