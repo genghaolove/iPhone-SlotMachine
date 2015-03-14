@@ -13,4 +13,10 @@ class Slot {
     var value = 0
     var image:UIImage! = UIImage(named: "Ace")
     var isRed = true
+    
+    init (value: Int, image: UIImage, isRed: Bool) {
+        self.value = value
+        self.image = image
+        self.isRed = isRed
+    }
 }
