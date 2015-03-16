@@ -331,8 +331,42 @@ class ViewController: UIViewController {
         // Debug
         //println("spin button pressed")
         
+        // Remove views so they don't stack on each other
+        removeSlotImageViews()
+        
         slots = Factory.createSlots()
         setupSecondContainer(self.secondContainer)
     }
+    
+    // Helpers
+    func removeSlotImageViews() {
+        if self.secondContainer != nil {
+            let container: UIView? = self.secondContainer!
+            
+            let subViews: Array? = container!.subviews
+            for view in subViews! {
+                view.removeFromSuperview()
+            }
+        }
+    }
+    
+    func hardReset() {
+        removeSlotImageViews()
+        slots.removeAll(keepCapacity: true)
+        self.setupSecondContainer(self.secondContainer)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
