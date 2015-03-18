@@ -10,6 +10,21 @@ import Foundation
 
 class SlotBrain {
     
+    class func computeWinnings(slots: [[Slot]]) -> Int {
+        var slotsInRows = unpackSlotsIntoSlotRows(slots)
+        
+        var winnings = 0
+        var flushWinCount = 0
+        var threeOfAKindWinCount = 0
+        var straightWinCount = 0
+        
+        for slotInRow in slotsInRows {
+            // TODO
+        }
+        
+        return winnings
+    }
+    
     class func unpackSlotsIntoSlotRows (slots: [[Slot]]) -> [[Slot]] {
         var slotRow1: [Slot] = []
         var slotRow2: [Slot] = []
