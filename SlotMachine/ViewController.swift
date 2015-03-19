@@ -373,6 +373,15 @@ class ViewController: UIViewController {
         
         slots = Factory.createSlots()
         setupSecondContainer(self.secondContainer)
+        
+        var winningMultiplier = SlotBrain.computeWinnings(slots)
+        
+        winnings = winningMultiplier * currentBet
+        credits += winnings
+        
+        currentBet = 0
+        
+        updateMainView()
     }
     
     // Helpers
@@ -411,17 +420,3 @@ class ViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
