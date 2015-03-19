@@ -14,12 +14,43 @@ class SlotBrain {
         var slotsInRows = unpackSlotsIntoSlotRows(slots)
         
         var winnings = 0
-        var flushWinCount = 0
+        var colorWinCount = 0
         var threeOfAKindWinCount = 0
         var straightWinCount = 0
         
-        for slotInRow in slotsInRows {
-            // TODO
+        for slotRow in slotsInRows {
+            if checkColor(slotRow) {
+                println("Color!")
+                winnings++
+                colorWinCount++
+            }
+            
+            if checkThreeInARow(slotRow) {
+                println("Three in a row!")
+                winnings++
+                straightWinCount++
+            }
+            
+            if checkThreeOfAKind(slotRow) {
+                println("Three of a kind!")
+                winnings += 3
+                threeOfAKindWinCount++
+            }
+        }
+        
+        if colorWinCount == 3 {
+            println("Royal flush!")
+            winnings += 15
+        }
+        
+        if straightWinCount == 3 {
+            println("Epic sreak!")
+            winnings += 500
+        }
+        
+        if threeOfAKindWinCount == 3 {
+            println("Threes all around!")
+            winnings += 100
         }
         
         return winnings
@@ -54,4 +85,57 @@ class SlotBrain {
         
         return slotInRows
     }
+    
+    // Helpers
+    
+    class func checkColor(slotRow: [Slot]) -> Bool {
+        let slot1 = slotRow[0]
+        let slot2 = slotRow[1]
+        let slot3 = slotRow[2]
+        
+        if slot1.isRed == true && slot2.isRed == true && slot3.isRed {
+            return true
+        }
+        else if slot1.isRed == false && slot2.isRed == false && slot3.isRed == false {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    class func checkThreeInARow(slotRow: [Slot]) -> Bool {
+        let slot1 = slotRow[0]
+        let slot2 = slotRow[1]
+        let slot3 = slotRow[2]
+        
+        if slot1.value == slot2.value - 1 && slot2.value == slot3.value - 2 {
+            return true
+        }
+        else if slot1.value == slot2.value + 1 && slot2.value == slot3.value + 2 {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    class func checkThreeOfAKind(slotRow: [Slot]) -> Bool {
+        let slot1 = slotRow[0]
+        let slot2 = slotRow[1]
+        let slot3 = slotRow[2]
+        
+        if slot1.value == slot2.value && slot1.value == slot3.value {
+            return true
+        }
+        else {
+            return false
+        }
+    }
 }
+
+
+
+
+
+
